@@ -7,7 +7,7 @@ class UserViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
     """
-    query_set = User.objects.all().order_by('-date_joined')
+    queryset = User.objects.all().order_by('-date_joined')
     serializer_class = UserSerializer
 
 
@@ -15,5 +15,5 @@ class GroupViewSet(viewsets.ModelViewSet):
     """
     API end point that allows groups to be viewed or edited
     """
-    query_set = Group.objects.all()
+    queryset = Group.objects.all()
     serializer_class = GroupSerializer
