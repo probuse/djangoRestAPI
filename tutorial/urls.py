@@ -19,7 +19,7 @@ from tutorial.quickstart import views
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
-router.register(r'groups' views.GroupViewSet)
+router.register(r'groups', views.GroupViewSet)
 
 # wire up our API using automatic URL routing
 # Additionally, we include login url for the browsable API.
