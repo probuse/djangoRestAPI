@@ -26,6 +26,7 @@ router.register(r'groups', views.GroupViewSet, base_name="groups")
 # Additionally, we include login url for the browsable API.
 
 urlpatterns = [
-    path('', include(router.urls)), # Generates urls for our API
+    path('', include('snippets.urls')),
+    path('quickstart/', include(router.urls)), # Generates urls for our API
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')) # for auth
 ]
